@@ -11,6 +11,8 @@ AWPCP 3.0+
 3. Aktywuj wtyczkę w Kokpicie
 4. Przjedź do zakładki Payment w Classifieds Settings, wtedy aktywuj i skonfiguruj bramkę Dotpay
 
+---------------------------------------
+
 ####WordPress/AWPCP 3.0+ plugin adding form based Dotpay payment gateway####
 
 ### Instructions: ###
