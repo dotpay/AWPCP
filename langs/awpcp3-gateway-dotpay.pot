@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: AWPCP3 Gateway Dotpay\n"
-"POT-Creation-Date: 2014-07-28 13:35+0100\n"
-"PO-Revision-Date: 2014-07-28 13:35+0100\n"
+"POT-Creation-Date: 2014-07-28 13:59+0100\n"
+"PO-Revision-Date: 2014-07-28 13:59+0100\n"
 "Last-Translator: Michak <michal.groele@roketto.eu>\n"
 "Language-Team: Michak <michal.groele@roketto.eu>\n"
 "Language: en_US\n"
@@ -43,7 +43,7 @@ msgstr ""
 #: ../includes/awpcp3-gateway-dotpay.class.php:128
 msgid ""
 "If this status is not PENDING or COMPLETED, then you may need to wait a bit "
-"before your payment is approved, or contact PayPal directly as to the reason "
+"before your payment is approved, or contact Dotpay directly as to the reason "
 "the payment is having a problem."
 msgstr ""
 
@@ -63,11 +63,16 @@ msgid "The payment transaction was canceled by the user."
 msgstr ""
 
 #: ../includes/awpcp3-gateway-dotpay.class.php:254
+#: ../includes/awpcp3-gateway-dotpay.class.php:255
 msgid "Activate Dotpay?"
 msgstr ""
 
 #: ../includes/awpcp3-gateway-dotpay.class.php:257
 msgid "Dotpay customer ID"
+msgstr ""
+
+#: ../includes/awpcp3-gateway-dotpay.class.php:258
+msgid "<br>your Dotpay customer ID"
 msgstr ""
 
 #: ../includes/awpcp3-gateway-dotpay.class.php:260
@@ -285,9 +290,13 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
+#: ../frontend/templates/awpcp3-dotpay-payment-button.tpl.php:4
+msgid "You chose payment by Dotpay. Click Continue do proceed"
+msgstr ""
+
 #: ../frontend/templates/awpcp3-dotpay-payment-button.tpl.php:14
 #, php-format
-msgid "Payment for order no. %1$s (%2$s)"
+msgid "Payment for advert no. %1$s (%2$s)"
 msgstr ""
 
 #: ../frontend/templates/awpcp3-dotpay-payment-button.tpl.php:15

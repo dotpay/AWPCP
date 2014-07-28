@@ -252,10 +252,10 @@ class AWPCP3_Gateway_Dotpay extends AWPCP_PaymentGateway {
         $section = $awpcp->settings->add_section('payment-settings', __('Dotpay Payment Gateway', 'awpcp3-gateway-dotpay'), 'dotpay', 100, array($awpcp->settings, 'section'));
 
         $awpcp->settings->add_setting($section, 'activatedotpay', __('Activate Dotpay?', 'awpcp3-gateway-dotpay'),
-            'checkbox', 1, 'Activate Dotpay?');
+            'checkbox', 1, __('Activate Dotpay?', 'awpcp3-gateway-dotpay'));
 
         $awpcp->settings->add_setting($section, 'dotpay_customerid', __('Dotpay customer ID', 'awpcp3-gateway-dotpay'), 'textfield', self::DOTPAY_PAYMENTS_TEST_CUSTOMER,
-            '<br>your Dotpay customer ID');
+            __('<br>your Dotpay customer ID', 'awpcp3-gateway-dotpay'));
 
         $awpcp->settings->add_setting($section, 'dotpaycurrencycode', __('Dotpay currency code', 'awpcp3-gateway-dotpay'), 'textfield', 'PLN', __('<br>The currency in which you would like to receive your Dotpay payments', 'awpcp3-gateway-dotpay'));
     }

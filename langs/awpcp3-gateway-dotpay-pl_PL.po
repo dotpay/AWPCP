@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: AWPCP3 Gateway Dotpay\n"
-"POT-Creation-Date: 2014-07-28 13:49+0100\n"
-"PO-Revision-Date: 2014-07-28 13:50+0100\n"
+"POT-Creation-Date: 2014-07-28 13:58+0100\n"
+"PO-Revision-Date: 2014-07-28 13:59+0100\n"
 "Last-Translator: Michak <michal.groele@roketto.eu>\n"
 "Language-Team: Michak <michal.groele@roketto.eu>\n"
 "Language: pl_PL\n"
@@ -75,12 +75,17 @@ msgid "The payment transaction was canceled by the user."
 msgstr "Transakcja została anulowana przez użytkownika."
 
 #: ../includes/awpcp3-gateway-dotpay.class.php:254
+#: ../includes/awpcp3-gateway-dotpay.class.php:255
 msgid "Activate Dotpay?"
 msgstr "Aktywować Dotpay?"
 
 #: ../includes/awpcp3-gateway-dotpay.class.php:257
 msgid "Dotpay customer ID"
 msgstr "ID klienta Dotpay"
+
+#: ../includes/awpcp3-gateway-dotpay.class.php:258
+msgid "<br>your Dotpay customer ID"
+msgstr "<br>twój ID klienta Dotpay"
 
 #: ../includes/awpcp3-gateway-dotpay.class.php:260
 msgid "Dotpay currency code"
