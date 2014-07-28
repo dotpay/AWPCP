@@ -6,6 +6,7 @@ Description: Add a credit card payment gateway for Dotpay (Poland) to AWPCP3+
 Version: 1.0
 Author: Michak
 Author URI: http://michak.pl
+Text Domain: awpcp3-gateway-dotpay
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -19,7 +20,7 @@ function init_awpcp3_gateway_dotpay() {
 }
 
 if ( in_array( 'another-wordpress-classifieds-plugin/awpcp.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
-    load_plugin_textdomain( 'dotpay-payment-gateway', false, dirname( plugin_basename( __FILE__ ) ) . '/langs/' );
+    load_plugin_textdomain( 'awpcp3-gateway-dotpay', false, dirname( plugin_basename( __FILE__ ) ) . '/langs/' );
     
     add_action( 'init', 'init_awpcp3_gateway_dotpay' );
 }

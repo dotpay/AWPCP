@@ -31,7 +31,7 @@ class AWPCP3_Gateway_Dotpay extends AWPCP_PaymentGateway {
         add_filter('awpcp-register-payment-methods', array($this, 'awpcpRegisterPaymentMethods'));          // AWPCP v3.0+
 
         //Init Payment in AWPCP_PaymentGateway class
-        parent::__construct(self::PAYMENT_METHOD, 'Dotpay Payment Gateway', 'Credit card payment via Dotpay', plugins_url('resources/images/dotpay.gif', __FILE__));
+        parent::__construct(self::PAYMENT_METHOD, __('Dotpay Payment Gateway', 'awpcp3-gateway-dotpay'), __('Credit card payment via Dotpay', 'awpcp3-gateway-dotpay'), plugins_url('resources/images/dotpay.gif', __FILE__));
     }
 
     /**
@@ -120,12 +120,12 @@ class AWPCP3_Gateway_Dotpay extends AWPCP_PaymentGateway {
 
 
             if ($variables <= 1) {
-                $message = __("We haven't received your payment information from Dotpay yet and we are unable to verify your transaction. Please reload this page or visit <a href=\"%s\">%s</a> in 30 seconds to continue placing your Ad.", 'AWPCP');
+                $message = __("We haven't received your payment information from Dotpay yet and we are unable to verify your transaction. Please reload this page or visit <a href=\"%s\">%s</a> in 30 seconds to continue placing your Ad.", 'awpcp3-gateway-dotpay');
                 $errors[] = sprintf($message, $url, $url);
             } else {
-                $message = __("Dotpay returned the following status from your payment: %s. %d payment variables were posted.",'AWPCP');
+                $message = __("Dotpay returned the following status from your payment: %s. %d payment variables were posted.",'awpcp3-gateway-dotpay');
                 $errors[] = sprintf($message, $response, count($_POST));
-                $errors[] = __("If this status is not PENDING or COMPLETED, then you may need to wait a bit before your payment is approved, or contact PayPal directly as to the reason the payment is having a problem.",'AWPCP');
+                $errors[] = __("If this status is not PENDING or COMPLETED, then you may need to wait a bit before your payment is approved, or contact Dotpay directly as to the reason the payment is having a problem.",'awpcp3-gateway-dotpay');
             }
 
             $errors[] = __("If you have any further questions, please contact this site administrator.",'AWPCP');
@@ -249,15 +249,15 @@ class AWPCP3_Gateway_Dotpay extends AWPCP_PaymentGateway {
         global $awpcp;
 
         // create a new section
-        $section = $awpcp->settings->add_section('payment-settings', 'Dotpay Payment Gateway', 'dotpay', 100, array($awpcp->settings, 'section'));
+        $section = $awpcp->settings->add_section('payment-settings', __('Dotpay Payment Gateway', 'awpcp3-gateway-dotpay'), 'dotpay', 100, array($awpcp->settings, 'section'));
 
-        $awpcp->settings->add_setting($section, 'activatedotpay', 'Activate Dotpay?',
+        $awpcp->settings->add_setting($section, 'activatedotpay', __('Activate Dotpay?', 'awpcp3-gateway-dotpay'),
             'checkbox', 1, 'Activate Dotpay?');
 
-        $awpcp->settings->add_setting($section, 'dotpay_customerid', 'Dotpay customer ID', 'textfield', self::DOTPAY_PAYMENTS_TEST_CUSTOMER,
+        $awpcp->settings->add_setting($section, 'dotpay_customerid', __('Dotpay customer ID', 'awpcp3-gateway-dotpay'), 'textfield', self::DOTPAY_PAYMENTS_TEST_CUSTOMER,
             '<br>your Dotpay customer ID');
 
-        $awpcp->settings->add_setting($section, 'dotpaycurrencycode', 'Dotpay currency code', 'textfield', 'PLN', '<br>The currency in which you would like to receive your Dotpay payments');
+        $awpcp->settings->add_setting($section, 'dotpaycurrencycode', __('Dotpay currency code', 'awpcp3-gateway-dotpay'), 'textfield', 'PLN', __('<br>The currency in which you would like to receive your Dotpay payments', 'awpcp3-gateway-dotpay'));
     }
 
 }
