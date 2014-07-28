@@ -1,4 +1,4 @@
-AWPCP 3.0+
+AWPCP 3.0+ Dotpay Gateway
 =====================
 
 *English version below*
