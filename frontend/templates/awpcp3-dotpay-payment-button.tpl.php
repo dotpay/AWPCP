@@ -11,7 +11,7 @@
         <input type="hidden" value="<?php echo esc_attr( $return_url ); ?>" name="URL">
         <input type="hidden" value="<?php echo esc_attr( $notify_url ); ?>" name="URLC">
         <input type="hidden" value="<?php echo esc_attr( $payment_type ); ?>" name="type">
-        <input type="hidden" value="<?php sprintf(__('Payment for advert no. %1$s (%2$s)', 'awpcp3-gateway-dotpay'), esc_attr( $order_id ), bloginfo('title')) ?>" name="description">
+        <input type="hidden" value="<?php echo sprintf(__('Payment for advert no. %1$s (%2$s)', 'awpcp3-gateway-dotpay'), esc_attr( $custom ), get_bloginfo('name')) ?>" name="description">
         <input class="button" type="submit" value="<?php _e('Continue', 'AWPCP') ?>" id="submit" name="submit">
     </p>
 </form>
