@@ -32,7 +32,7 @@ class AWPCP3_Gateway_Dotpay extends AWPCP_PaymentGateway {
         add_filter('awpcp-register-payment-methods', array($this, 'awpcpRegisterPaymentMethods'));          // AWPCP v3.0+
 
         //Init Payment in AWPCP_PaymentGateway class
-        parent::__construct(self::PAYMENT_METHOD, __('Dotpay Payment Gateway', 'awpcp3-gateway-dotpay'), __('Credit card payment via Dotpay', 'awpcp3-gateway-dotpay'), PLUGINURL . '/resources/images/dotpay.gif');
+        parent::__construct(self::PAYMENT_METHOD, __('Dotpay Payment Gateway', 'awpcp3-gateway-dotpay'), __('Credit card payment via Dotpay', 'awpcp3-gateway-dotpay'), AWPCP3_DOTPAY_PLUGIN_URL . '/resources/images/dotpay.gif');
     }
 
     public static function get_instance() {
@@ -84,7 +84,7 @@ class AWPCP3_Gateway_Dotpay extends AWPCP_PaymentGateway {
         $dotpay_url = self::DOTPAY_URL;
 
         ob_start();
-            include(PLUGINROOT . '/frontend/templates/awpcp3-dotpay-payment-button.tpl.php');
+            include(AWPCP3_DOTPAY_PLUGIN_DIR . '/frontend/templates/awpcp3-dotpay-payment-button.tpl.php');
             $html = ob_get_contents();
         ob_end_clean();
 
